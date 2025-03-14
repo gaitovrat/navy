@@ -68,7 +68,6 @@ def main() -> None:
 
     plt.figure(figsize=(10, 8))
 
-    # Plot the original points with their true labels
     plt.scatter(
         X[y_pred == 1, 0], X[y_pred == 1, 1], color="blue", label="Above the line"
     )
@@ -84,7 +83,6 @@ def main() -> None:
         label="On the line",
     )
 
-    # Plot the original line
     x_range = np.linspace(min_value, max_value, n)
     plt.plot(x_range, 3 * x_range + 2, "k-", label="y = 3x + 2")
     plt.show()
