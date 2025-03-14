@@ -17,7 +17,7 @@ class Perceptron:
     def fit(self, X: np.ndarray, y: np.ndarray):
         """Fit perception weights and bias"""
         n_features = X.shape[1]
-        self.weights = np.random.uniform(size=n_features)
+        self.weights = np.random.randn(n_features)
         self.bias = np.random.random()
 
         for iteration in range(self.n_iterations):
